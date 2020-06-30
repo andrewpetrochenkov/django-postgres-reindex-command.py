@@ -1,16 +1,7 @@
-from setuptools import setup
+import setuptools
 
-setup(
+setuptools.setup(
     name='django-postgres-reindex-command',
-    version='2020.4.16',
-    install_requires=[
-        'Django',
-        'click',
-        'setuptools',
-    ],
-    packages=[
-        'django_postgres_reindex_command',
-        'django_postgres_reindex_command.management',
-        'django_postgres_reindex_command.management.commands',
-    ],
+    install_requires=open('requirements.txt').read().splitlines(),
+    packages=setuptools.find_packages()
 )
